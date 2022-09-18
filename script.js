@@ -8,16 +8,25 @@ console.log(`You: ${playerScore} || Computer: ${compScore}`);
 
 function setScissors() {
     const playerChoice = "scissors";
+    scissors.removeEventListener('click', setScissors);
+    rock.removeEventListener('click', setRock);
+    paper.removeEventListener('click', setPaper);
     return getCompChoice(playerChoice);
 };
 
 function setRock() {
     const playerChoice = "rock";
+    scissors.removeEventListener('click', setScissors);
+    rock.removeEventListener('click', setRock);
+    paper.removeEventListener('click', setPaper);
     return getCompChoice(playerChoice);
 }
 
 function setPaper() {
     const playerChoice = "paper";
+    scissors.removeEventListener('click', setScissors);
+    rock.removeEventListener('click', setRock);
+    paper.removeEventListener('click', setPaper);
     return getCompChoice(playerChoice);
 }
 
@@ -78,17 +87,40 @@ function playerWin() {
     playerScore++;
     console.log(`You: ${playerScore} || Computer: ${compScore}`);
     console.log("You won!");
+    checkGameWinner();
 }
 
 function compWin() {
     compScore++;
     console.log(`You: ${playerScore} || Computer: ${compScore}`);
     console.log("You lost!");
+    checkGameWinner();
 }
 
 function tie() {
     console.log(`You: ${playerScore} || Computer: ${compScore}`);
     console.log("You drew!");
+    checkGameWinner();
+}
+
+function checkGameWinner() {
+    if (playerScore === 3) {
+        gameWinnerScreen();
+    } else if (compScore === 3) {
+        gameOverScreen();
+    } else {
+        scissors.addEventListener('click', setScissors);
+        rock.addEventListener('click', setRock);
+        paper.addEventListener('click', setPaper);
+    }
+}
+
+function gameWinnerScreen() {
+    console.log("THE WORLD IS SAVED");
+}
+
+function gameOverScreen() {
+    console.log("THE WORLD IS DOOMED");
 }
 
 scissors.addEventListener('click', setScissors);
