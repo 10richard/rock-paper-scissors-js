@@ -1,0 +1,46 @@
+.gameInfo {
+    display: flex;
+    flex-flow:column wrap;
+    align-items: center;
+}
+
+.gameInfo > h1 {
+    font-size: 60px;
+}
+
+.labels {
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+    width: 600px;
+}
+
+.scores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 575px;
+}
+
+.playerLabel, .compLabel {
+    font-size: 45px;
+    margin: 0 100px;
+}
+
+#playerScore, #compScore {
+    margin: 0 145px;
+    font-size: 30px;
+}
+
+.choices {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.btn {
+    flex: auto;
+    margin: 10px 30px;
+    height: 40px;
+}
