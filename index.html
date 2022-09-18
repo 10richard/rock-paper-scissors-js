@@ -2,15 +2,33 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>rps</title>
+        <title>ROCK PAPER SCISSORS</title>
         <script src="script.js" defer></script>
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-        <div>
-            <button id="rock" class="userChoice">Rock</button>
-            <button id="paper" class="userChoice">Paper</button>
-            <button id="scissors" class="userChoice">Scissors</button>
+        <div class="gameInfo">
+            <h1>FIRST TO 3</h1>
+            <p class="scoreMessage"></p>
+            <div class="scoreboard">
+                <div class="labels">
+                    <p class="playerLabel">You</p>
+                    <p class="compLabel">Enemy</p>
+                </div>
+                <div class="scores">
+                    <p id="playerScore">0</p>
+                    <p id="compScore">0</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="gameWinner">
+            <p class="winMessage">YOU SAVED THE WORLD!</p> -->
+
+        <div class="choices">
+            <button id="rock" class="btn">Rock</button>
+            <button id="paper" class="btn">Paper</button>
+            <button id="scissors" class="btn">Scissors</button>
         </div>
     </body>
 </html>
