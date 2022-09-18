@@ -1,8 +1,12 @@
+let playerScore = 0;
+let compScore = 0;
+
 const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
 const scissors = document.querySelector("#scissors");
-let playerScore = 0;
-let compScore = 0;
+const playerScoreBox = document.getElementById("playerScore");
+const compScoreBox = document.getElementById("compScore");
+
 
 console.log(`You: ${playerScore} || Computer: ${compScore}`);
 
@@ -85,6 +89,7 @@ function playerScissors(compChoice) {
 
 function playerWin() {
     playerScore++;
+    playerScoreBox.innerHTML = `${playerScore}`;
     console.log(`You: ${playerScore} || Computer: ${compScore}`);
     console.log("You won!");
     checkGameWinner();
@@ -92,6 +97,7 @@ function playerWin() {
 
 function compWin() {
     compScore++;
+    compScoreBox.innerHTML = `${compScore}`;
     console.log(`You: ${playerScore} || Computer: ${compScore}`);
     console.log("You lost!");
     checkGameWinner();
