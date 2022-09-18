@@ -39,57 +39,39 @@ function checkPlayerSelection(playerChoice, compChoice) {
 }
 
 function playerRock(compChoice) {
-    for (let i = 0; i < 5; i++) {
         if (compChoice === "rock") {
             tie();
-            break
         } else if (compChoice === "paper") {
             compWin();
-            break
         } else if (compChoice === "scissors") {
             playerWin();
-            break
         } else {
             alert("Error with compChoice");
-            break
         }
-    }
 }
 
 function playerPaper(compChoice) {
-    for (let i = 0; i < 5; i++) {
         if (compChoice === "rock") {
             playerWin();
-            break
         } else if (compChoice === "paper") {
             tie();
-            break
         } else if (compChoice === "scissors") {
             compWin();
-            break
         } else {
             alert("Error with compChoice");
-            break
         }
-    }
 }
 
 function playerScissors(compChoice) {
-    for (let i = 0; i < 5; i++) {
         if (compChoice === "rock") {
             compWin();
-            break
         } else if (compChoice === "paper") {
             playerWin();
-            break
         } else if (compChoice === "scissors") {
             tie();
-            break
         } else {
             alert("Error with compChoice");
-            break
         }
-    }
 }
 
 function playerWin() {
