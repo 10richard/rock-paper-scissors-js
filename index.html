@@ -9,7 +9,8 @@
     <body>
         <div class="gameInfo">
             <h1>FIRST TO 3</h1>
-            <p class="scoreMessage"></p>
+            <p id="gameMessage"></p>
+            <p id="announceWinner"></p>
             <div class="scoreboard">
                 <div class="labels">
                     <p class="playerLabel">You</p>
@@ -19,6 +20,20 @@
                     <p id="playerScore">0</p>
                     <p id="compScore">0</p>
                 </div>
+            </div>
+        </div>
+
+        <div class="gameOverContainer hide">
+            <div class="gameOver">
+                <h1>GAME OVER</h1>
+                <button class="tryAgain">Try again?</button>
+            </div>
+        </div>
+
+        <div class="gameWinnerContainer hide">
+            <div class="gameWinner">
+                <h1>YOU WON!</h1>
+                <button class="tryAgain">Restart?</button>
             </div>
         </div>
 
