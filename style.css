@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .gameInfo {
     display: flex;
     flex-flow:column wrap;
@@ -8,10 +12,17 @@
     font-size: 60px;
 }
 
+#gameMessage {
+    font-size: 22px;
+}
+
+#announceWinner {
+    font-size: 28px;
+}
+
 .labels {
     display: flex;
     justify-content: space-around;
-    box-sizing: border-box;
     width: 600px;
 }
 
@@ -19,7 +30,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
     width: 575px;
 }
 
@@ -43,4 +53,64 @@
     flex: auto;
     margin: 10px 30px;
     height: 40px;
+}
+
+.gameOverContainer {
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+}
+
+.gameOver {
+    justify-content: center;
+    text-align: center;
+    background-color: #fff;
+    box-shadow:rgba(0, 0, 0, 10);
+    width: 600px;
+    max-width: 100%;
+    padding: 30px 50px;
+    border-radius: 10px;
+}
+
+.gameOver h1 {
+    margin: 0 0 30px;
+}
+
+.gameWinnerContainer {
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+}
+
+.gameWinner {
+    justify-content: center;
+    text-align: center;
+    background-color: #fff;
+    box-shadow:rgba(0, 0, 0, 10);
+    width: 600px;
+    max-width: 100%;
+    padding: 30px 50px;
+    border-radius: 10px;
+}
+
+.tryAgain {
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+}
+
+.hide {
+    display: none;
 }
